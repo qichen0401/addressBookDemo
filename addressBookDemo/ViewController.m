@@ -10,7 +10,7 @@
 
 #import "AddressBookManager.h"
 
-@interface ViewController ()
+@interface ViewController () <AddressBookManagerDelegate>
 
 @end
 
@@ -19,8 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    AddressBookManager *addressBookManager =  [AddressBookManager sharedManager];
+    addressBookManager.delegate = self;
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -28,7 +30,7 @@
 }
 
 - (IBAction)requestAccess:(id)sender {
-    [AddressBookManager requestAccess];
+    [[AddressBookManager sharedManager] requestAccess];
 }
 
 - (IBAction)iterateAllRecord:(id)sender {
@@ -48,6 +50,14 @@
 
 - (IBAction)addRecord:(id)sender {
     [AddressBookManager addRecordWithFirstName:@"first" lastName:@"last" phone:@"123456" imageData:UIImagePNGRepresentation([UIImage imageNamed:@"contactImage.png"])];
+}
+
+- (void)didRequestAccess:(BOOL)isGranted{
+    if (isGranted) {
+        NSLog(@"authorized");
+    }else{
+        NSLog(@"denied");
+    }
 }
 
 

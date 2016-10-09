@@ -10,14 +10,15 @@
 
 @implementation AddressBookManager
 
-+ (void)requestAccess {
-    ABAddressBookRequestAccessWithCompletion(ABAddressBookCreateWithOptions(NULL, nil), ^(bool granted, CFErrorRef error) {
-        if (granted) {
-            NSLog(@"authorized");
-        }else{
-            NSLog(@"denied");
-        }
+@synthesize delegate;
+
++ (id)sharedManager {
+    static AddressBookManager *sharedMyManager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedMyManager = [[self alloc] init];
     });
+    return sharedMyManager;
 }
 
 + (BOOL)isGranted {
@@ -84,6 +85,17 @@
     ABAddressBookSave(addressBookRef, nil);
     
     CFRelease(addressBookRef);
+}
+
+- (void)requestAccess {
+    ABAddressBookRequestAccessWithCompletion(ABAddressBookCreateWithOptions(NULL, nil), ^(bool granted, CFErrorRef error) {
+        //        if (granted) {
+        //            NSLog(@"authorized");
+        //        }else{
+        //            NSLog(@"denied");
+        //        }
+        [delegate didRequestAccess:granted];
+    });
 }
 
 

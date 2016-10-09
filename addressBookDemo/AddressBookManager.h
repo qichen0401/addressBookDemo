@@ -10,19 +10,23 @@
 
 @import AddressBook;
 
+@protocol AddressBookManagerDelegate <NSObject>
+
+- (void)didRequestAccess:(BOOL)isGranted;
+
+@end
+
 @interface AddressBookManager : NSObject
 
-+ (void)requestAccess;
+@property (nonatomic, weak) id <AddressBookManagerDelegate> delegate;
+
++ (id)sharedManager;
 + (BOOL)isGranted;
 + (void) iterateAllRecordWith:(void (^)(ABRecordRef))block;
 + (NSString*)getName:(ABRecordRef)record;
 + (NSArray*)getPhone:(ABRecordRef)record;
 + (void) addRecordWithFirstName:(NSString*)firstName lastName:(NSString*)lastName phone:(NSString*)phone imageData:(NSData*)imageData;
 
-
-// add delegate to notifi authorized done
-
-
-
+- (void)requestAccess;
 
 @end
