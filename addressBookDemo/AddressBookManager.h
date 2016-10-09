@@ -8,10 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
+@import AddressBook;
+
 @interface AddressBookManager : NSObject
 
-+ (id)sharedManager;
++ (void)requestAccess;
++ (BOOL)isGranted;
++ (void) iterateAllRecordWith:(void (^)(ABRecordRef))block;
++ (NSString*)getName:(ABRecordRef)record;
++ (NSArray*)getPhone:(ABRecordRef)record;
++ (void) addRecordWithFirstName:(NSString*)firstName lastName:(NSString*)lastName phone:(NSString*)phone imageData:(NSData*)imageData;
 
-- (void)requestAccess;
+
+// add delegate to notifi authorized done
+
+
+
 
 @end

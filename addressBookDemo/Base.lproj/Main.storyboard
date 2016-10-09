@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,20 +19,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ove-0W-wz4">
-                                <frame key="frameInset" minX="151" minY="265" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ove-0W-wz4">
+                                <state key="normal" title="request access"/>
                                 <connections>
                                     <action selector="requestAccess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RTQ-ZQ-QqD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmJ-eG-84q">
+                                <state key="normal" title="iterate all record"/>
+                                <connections>
+                                    <action selector="iterateAllRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MiS-17-r0b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPk-dx-9aQ">
+                                <state key="normal" title="add record"/>
+                                <connections>
+                                    <action selector="addRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aKG-Ql-W7I"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ove-0W-wz4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.5" id="Bq4-RQ-m5Z"/>
+                            <constraint firstItem="sPk-dx-9aQ" firstAttribute="width" secondItem="KmJ-eG-84q" secondAttribute="width" id="NH0-hU-SUq"/>
+                            <constraint firstItem="sPk-dx-9aQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OE6-rb-AAh"/>
+                            <constraint firstItem="KmJ-eG-84q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tft-fs-Vdo"/>
+                            <constraint firstItem="sPk-dx-9aQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.5" id="WqX-Jd-bcg"/>
+                            <constraint firstItem="KmJ-eG-84q" firstAttribute="width" secondItem="ove-0W-wz4" secondAttribute="width" id="ZQZ-zx-009"/>
+                            <constraint firstItem="ove-0W-wz4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="afS-wX-ZLM"/>
+                            <constraint firstItem="KmJ-eG-84q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cPW-xk-6ba"/>
+                            <constraint firstItem="ove-0W-wz4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="f2f-MQ-aFa"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
         </scene>
     </scenes>
 </document>
