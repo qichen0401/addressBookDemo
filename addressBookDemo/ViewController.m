@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "AddressBookManager.h"
+
 @interface ViewController ()
 
 @end
@@ -24,6 +26,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)requestAccess:(id)sender {
+    [[AddressBookManager sharedManager] requestAccess];
+}
+
 
 
 @end

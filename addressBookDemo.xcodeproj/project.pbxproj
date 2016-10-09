@@ -13,6 +13,7 @@
 		C01258A11DA9CF1100617A53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C012589F1DA9CF1100617A53 /* Main.storyboard */; };
 		C01258A31DA9CF1100617A53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C01258A21DA9CF1100617A53 /* Assets.xcassets */; };
 		C01258A61DA9CF1100617A53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01258A41DA9CF1100617A53 /* LaunchScreen.storyboard */; };
+		C01258AF1DA9CF8E00617A53 /* AddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C01258AE1DA9CF8E00617A53 /* AddressBookManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		C01258A21DA9CF1100617A53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C01258A51DA9CF1100617A53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C01258A71DA9CF1100617A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C01258AD1DA9CF8E00617A53 /* AddressBookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookManager.h; sourceTree = "<group>"; };
+		C01258AE1DA9CF8E00617A53 /* AddressBookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				C012589A1DA9CF1100617A53 /* AppDelegate.m */,
 				C012589C1DA9CF1100617A53 /* ViewController.h */,
 				C012589D1DA9CF1100617A53 /* ViewController.m */,
+				C01258AD1DA9CF8E00617A53 /* AddressBookManager.h */,
+				C01258AE1DA9CF8E00617A53 /* AddressBookManager.m */,
 				C012589F1DA9CF1100617A53 /* Main.storyboard */,
 				C01258A21DA9CF1100617A53 /* Assets.xcassets */,
 				C01258A41DA9CF1100617A53 /* LaunchScreen.storyboard */,
@@ -154,6 +159,7 @@
 				C012589E1DA9CF1100617A53 /* ViewController.m in Sources */,
 				C012589B1DA9CF1100617A53 /* AppDelegate.m in Sources */,
 				C01258981DA9CF1100617A53 /* main.m in Sources */,
+				C01258AF1DA9CF8E00617A53 /* AddressBookManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +281,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 45FN5AP5K3;
 				INFOPLIST_FILE = addressBookDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qichen.addressBookDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -287,6 +294,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 45FN5AP5K3;
 				INFOPLIST_FILE = addressBookDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qichen.addressBookDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
